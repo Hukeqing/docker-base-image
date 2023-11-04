@@ -15,5 +15,6 @@ RUN \
   nvm use ${NODE_VERSION} && \
   nvm alias default ${NODE_VERSION}
 
-CMD bash
+ENV PATH="/root/.nvm/versions/node/v${NODE_VERSION}/bin/:${PATH}"
 
+CMD bash
